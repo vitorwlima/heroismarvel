@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './FormApi.module.css';
 
 const FormApi = () => {
   const [inputHeroi, setInputHeroi] = React.useState('');
@@ -27,15 +29,11 @@ const FormApi = () => {
     console.log(e);
   }
 
-  function handleClick(e) {
-    //redireciona pra outra página com o index do heroi pra buscar em dadosHerois
-    console.log(e.target.getAttribute('index'));
-  }
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.FormApi} onSubmit={handleSubmit}>
       <label htmlFor="heroi">icone-lupa</label>
       <input
+        className={styles.input}
         type="text"
         id="heroi"
         name="heroi"
@@ -46,11 +44,11 @@ const FormApi = () => {
       <button>Pesquisar</button>
       {dadosHerois &&
         dadosHerois.data &&
-        dadosHerois.data.results.map((heroi, index) => {
+        dadosHerois.data.results.map((heroi) => {
           return (
-            <div index={index} onClick={handleClick} key={heroi.id}>
-              {heroi.name}
-            </div>
+            <Link to={`heroi/${heroi.id}`} key={heroi.id}>
+              <div>{heroi.name}</div>
+            </Link>
           );
         })}
     </form>
