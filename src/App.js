@@ -1,10 +1,15 @@
 import React from 'react';
-import FormApi from './Components/FormApi';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Components/Home';
 
 const App = () => {
   return (
     <div>
-      <FormApi />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
