@@ -12,7 +12,7 @@ const FormApi = () => {
   const apiPrivKey = '815ff3955b1a4a4a2a2e3b537df4f2891a065a74';
   const apiPublicKey = '9577a922c53e29cd435dc1a4c081020e';
   const md5Var = md5(`${timeStamp}${apiPrivKey}${apiPublicKey}`);
-  const url = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${inputHeroi}&ts=${timeStamp}&apikey=${apiPublicKey}&hash=${md5Var}`;
+  const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${inputHeroi}&ts=${timeStamp}&apikey=${apiPublicKey}&hash=${md5Var}`;
 
   React.useEffect(() => {
     if (inputHeroi !== '') {
