@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  color: white;
+  height: 84vh;
+  align-items: flex-end;
+  justify-content: center;
+}

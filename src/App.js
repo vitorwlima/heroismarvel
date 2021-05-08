@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Heroi from './Components/Heroi';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="heroi/:id" element={<Heroi />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 };

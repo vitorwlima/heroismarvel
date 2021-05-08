@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ededed;
+  text-shadow: #000 0px 0px 1px;
+}
+
+.input {
+  border: none;
+  font-size: inherit;
+  padding: 0.5rem;
+  color: #ddd;
+}
+
+.input,
+.divinput {
+  background-color: #1e222f;
+  border-radius: 0.3em;
+}
+
+.input:focus {
+  border: none;
+  outline: none;
+}
+
+.lupa {
+  color: #b1b1b2;
+  padding: 0.5rem 0.75rem;
+}
+
+.divinput {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  width: 70vw;
+  margin-bottom: 3rem;
+}
+
+.divinput label {
+  padding: 0 0.2em;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.heroicard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  width: 70vw;
+  transition: 0.3s;
+}
+
+.imgheroi {
+  border-radius: 0.3rem;
+}
+
+.heroiname {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-left: 2rem;
+}
+
+.heroicard:hover {
+  transform: scale(1.1);
+}
+
+.cardwrapper {
+  max-height: 60vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

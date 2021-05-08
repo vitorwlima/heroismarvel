@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.background {
+  height: 100vh;
+  background-image: url(../assets/deadpool-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.gradient {
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 1%,
+    transparent 99%
+  );
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './FormApi.module.css';
+import SearchIcon from '@material-ui/icons/Search';
 
 const FormApi = () => {
   const [inputHeroi, setInputHeroi] = React.useState('');
@@ -26,31 +27,45 @@ const FormApi = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
   }
 
   return (
-    <form className={styles.FormApi} onSubmit={handleSubmit}>
-      <label htmlFor="heroi">icone-lupa</label>
-      <input
-        className={styles.input}
-        type="text"
-        id="heroi"
-        name="heroi"
-        value={inputHeroi}
-        onChange={(e) => setInputHeroi(e.target.value)}
-      />
-      <p>{inputHeroi}</p>
-      <button>Pesquisar</button>
-      {dadosHerois &&
-        dadosHerois.data &&
-        dadosHerois.data.results.map((heroi) => {
-          return (
-            <Link to={`heroi/${heroi.id}`} key={heroi.id}>
-              <div>{heroi.name}</div>
-            </Link>
-          );
-        })}
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <h1 className={styles.titulo}>My Superhero</h1>
+      <div className={styles.divinput}>
+        <SearchIcon className={styles.lupa} />
+        <input
+          className={styles.input}
+          type="text"
+          id="heroi"
+          name="heroi"
+          placeholder="Search for a superhero"
+          value={inputHeroi}
+          onChange={(e) => setInputHeroi(e.target.value)}
+        />
+      </div>
+      <div className={styles.cardwrapper}>
+        {dadosHerois &&
+          dadosHerois.data &&
+          dadosHerois.data.results.map((heroi) => {
+            return (
+              <Link
+                to={`heroi/${heroi.id}`}
+                key={heroi.id}
+                className={styles.link}
+              >
+                <div className={styles.heroicard}>
+                  <img
+                    className={styles.imgheroi}
+                    src={`${heroi.thumbnail.path}/standard_medium.${heroi.thumbnail.extension}`}
+                    alt=""
+                  />
+                  <span className={styles.heroiname}>{heroi.name}</span>
+                </div>
+              </Link>
+            );
+          })}
+      </div>
     </form>
   );
 };
