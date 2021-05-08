@@ -40,7 +40,7 @@ const FormApi = () => {
           id="heroi"
           name="heroi"
           placeholder="Search for a superhero"
-          value={inputHeroi}
+          value={inputHeroi.replace(' ', '-')}
           onChange={(e) => setInputHeroi(e.target.value)}
         />
       </div>
@@ -58,7 +58,7 @@ const FormApi = () => {
                   <img
                     className={styles.imgheroi}
                     src={`${heroi.thumbnail.path}/standard_medium.${heroi.thumbnail.extension}`}
-                    alt=""
+                    alt={heroi.name}
                   />
                   <span className={styles.heroiname}>{heroi.name}</span>
                 </div>

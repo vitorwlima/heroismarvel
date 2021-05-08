@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import styles from './Heroi.module.css';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Heroi = () => {
   const { id } = useParams();
@@ -22,9 +23,24 @@ const Heroi = () => {
 
   if (heroiEscolhido === null) return null;
   return (
-    <div className={styles.heroi}>
-      <Link to="/">Voltar à home</Link>
-      Herói: {heroiEscolhido.data.results[0].name}
+    <div className={styles.geral}>
+      <Link to="/" className={styles.btnhome}>
+        <SearchIcon className={styles.lupa} />
+        <span to="/" className={styles.btnlink}>
+          Voltar à pesquisa
+        </span>
+      </Link>
+      <section className={styles.heroisection}>
+        <img
+          className={styles.image}
+          src={`${heroiEscolhido.data.results[0].thumbnail.path}/standard_large.${heroiEscolhido.data.results[0].thumbnail.extension}`}
+          alt={heroiEscolhido.data.results[0].name}
+        />
+        <h1 className={styles.nome}>{heroiEscolhido.data.results[0].name}</h1>
+        <p className={styles.descricao}>
+          {heroiEscolhido.data.results[0].description}
+        </p>
+      </section>
     </div>
   );
 };
