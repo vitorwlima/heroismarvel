@@ -21,8 +21,9 @@ const FormApi = () => {
           .then((res) => res.json())
           .then((json) => setDadosHerois(json));
       }
-      fetchApi(url);
+      fetchApi();
     } else if (inputHeroi === '') setDadosHerois(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputHeroi]);
 
   function handleSubmit(e) {
