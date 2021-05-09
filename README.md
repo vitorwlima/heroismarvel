@@ -1,5 +1,7 @@
 # Heróis Marvel
 
+Entre no site por aqui: heroismarvel.vercel.app
+
 Abaixo há um preview da aplicação rodando em desktop e em mobile.
 
 https://user-images.githubusercontent.com/82615423/117585686-1cfb5000-b0ea-11eb-91d7-6588f7c21007.mp4
