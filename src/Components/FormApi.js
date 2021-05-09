@@ -34,7 +34,9 @@ const FormApi = () => {
     <form onSubmit={handleSubmit} className={styles.form}>
       <h1 className={styles.titulo}>My Superhero</h1>
       <div className={styles.divinput}>
-        <SearchIcon className={styles.lupa} />
+        <label htmlFor="heroi">
+          <SearchIcon className={styles.lupa} />
+        </label>
         <input
           className={styles.input}
           type="text"
