@@ -29,6 +29,13 @@ p {
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+  transition: 0.3s;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+.btnhome:hover {
+  color: #aaa;
 }
 
 .btnlink {
@@ -79,4 +86,10 @@ p {
   font-family: 'Nunito', sans-serif;
   max-width: 20vw;
   overflow-x: hidden;
+}
+
+@media (min-width: 1000px) {
+  .descricao {
+    max-width: 40vw;
+  }
 }

@@ -71,6 +71,11 @@ const FormApi = () => {
                     alt={heroi.name}
                   />
                   <span className={styles.heroiname}>{heroi.name}</span>
+                  <span className={styles.heroidesc}>
+                    {heroi.description.length
+                      ? heroi.description.substring(0, 30) + '...'
+                      : 'This hero has no available description'}
+                  </span>
                 </div>
               </Link>
             );
