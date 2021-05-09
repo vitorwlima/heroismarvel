@@ -5,7 +5,7 @@ import styles from './Home.module.css';
 
 const Home = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Head title="Heróis Marvel | Home" />
       <div className={styles.background}>
         <div className={styles.gradient}></div>

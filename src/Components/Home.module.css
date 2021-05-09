@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 
-body {
-  margin: 0;
+.wrapper {
   overflow-y: hidden;
+  max-height: 100vh;
 }
 
 .background {
