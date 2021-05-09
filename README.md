@@ -6,13 +6,13 @@ https://user-images.githubusercontent.com/82615423/117585686-1cfb5000-b0ea-11eb-
 
 https://user-images.githubusercontent.com/82615423/117586171-de1ac980-b0ec-11eb-876a-17a91ccfa55c.mp4
 
-Antes desse projeto, nunca havia trabalhado com React nem com Apis. Durante os dias 06 e 07, fiz um curso de reactJS de 10 horas de duração, aplicando os conceitos no VScode enquanto aprendia. Após isso, comecei o projeto com o conhecimento que tinha e fui buscando solucionar os problemas à medida que apareciam.
+Antes desse projeto, nunca havia trabalhado com React nem com APIs. Durante os dias 06 e 07, fiz um curso de reactJS de 10 horas de duração, aplicando os conceitos no VScode enquanto aprendia. Após isso, comecei o projeto com o conhecimento que tinha e fui buscando solucionar os problemas à medida que apareciam.
 
 No começo, tentei fazer a API funcionar. Demoraram horas pois nunca havia usado uma API que possui senha (api key) assim como a da Marvel. Após conseguir dar o fetch inicial e ver o objeto returnar no console, tive que pensar em como o usuário iria poder inserir o herói que quisesse. Pensei que a única solução seria o usuário digitar o nome do herói perfeitamente assim como aparece nos links, ou rodar algum processo de limpar a string para retornar uma string que pudesse ser usada no link diretamente. Depois de algum tempo lendo a documentação da api, descobri que tinha o parâmetro "nameStartsWith" e me deu um alívio pois soube que seria isso que eu usaria.
 
-Após isso, fiquei com dúvida no CSS se realizava a estilização por styled components ou css normal ou css modules, foi os três que vi durante meu estudo inicial. Decidi fazer os módulos pois ficaria relativamente organizado e eu não estava confortável com os styled components, embora tenha achado a ideia muito interessante e que pretendo aplicar nos próximos projetos.
+Após isso, fiquei com dúvida no CSS se realizava a estilização por styled components ou css normal ou css modules, foi os três que vi durante meu estudo inicial. Decidi fazer os módulos pois ficaria relativamente organizado e eu não estava confortável com os styled components, embora tenha os achado uma ideia muito interessante e que pretendo aplicar nos próximos projetos.
 
-Por fim, o website chegou em um nível que achei aceitável, com todas as funcionalidades de busca funcionando e um design básico que cumpre seu propósito. Em uma versão futura, gostaria de adicionar algumas comics dos personagens em sua tela ou em uma seção separada por um botão, assim como otimizações no código. Além disso, pretendo implementar o typescript (não aprendi pois não achei que valeria a pena nesse período de tempo).
+Por fim, o website chegou em um nível que achei aceitável, com todas as funcionalidades de busca funcionando e um design básico que cumpre seu propósito. Em uma versão futura, irei adicionar algumas comics dos personagens em sua tela ou em uma seção separada por um botão, assim como otimizações no código. Além disso, pretendo implementar o typescript (não aprendi pois não achei que valeria a pena nesse período de tempo).
 
 
 
