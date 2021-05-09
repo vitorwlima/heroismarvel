@@ -14,7 +14,7 @@ No começo, tentei fazer a API funcionar. Demoraram horas pois nunca havia usado
 
 Após isso, fiquei com dúvida no CSS se realizava a estilização por styled components ou css normal ou css modules, foi os três que vi durante meu estudo inicial. Decidi fazer os módulos pois ficaria relativamente organizado e eu não estava confortável com os styled components, embora tenha os achado uma ideia muito interessante e que pretendo aplicar nos próximos projetos.
 
-Por fim, o website chegou em um nível que achei aceitável, com todas as funcionalidades de busca funcionando e um design básico que cumpre seu propósito. Em uma versão futura, irei adicionar algumas comics dos personagens em sua tela ou em uma seção separada por um botão, assim como otimizações no código. Além disso, pretendo implementar o typescript (não aprendi pois não achei que valeria a pena nesse período de tempo).
+Por fim, o website chegou em um nível que achei aceitável, com todas as funcionalidades de busca funcionando e um design básico que cumpre seu propósito. Em uma versão futura, irei adicionar algumas comics dos personagens em sua tela ou em uma seção separada por um botão, assim como otimizações no código. Além disso, pretendo implementar o typescript (não aprendi pois não achei que valeria a pena nesse período de tempo) e fazer o projeto dividido em mais componentes para usufruir mais do React.
 
 
 
