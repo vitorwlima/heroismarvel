@@ -10,8 +10,10 @@ const Home = () => {
       <div className={styles.background}>
         <div className={styles.gradient}></div>
       </div>
-
       <FormApi />
+      <div className={styles.footer}>
+        Data provided by Marvel. © 2021 MARVEL
+      </div>
     </div>
   );
 };

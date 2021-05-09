@@ -1,6 +1,9 @@
 .geral {
-  height: 100vh;
-  background-color: #1e222f;
+  min-height: 100vh;
+  background-color: hsl(226, 22%, 15%);
+  display: table;
+  width: 100vw;
+  padding-bottom: 0.9rem;
 }
 
 .btnhome {
@@ -43,4 +46,11 @@
   font-size: 1.25rem;
   line-height: 1.5;
   color: #ccc;
+  margin-bottom: 2.5rem;
+}
+
+.footer {
+  color: #ccc;
+  text-align: center;
+  display: table-footer-group;
 }

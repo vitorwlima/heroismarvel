@@ -47,11 +47,14 @@ const Heroi = () => {
         />
         <h1 className={styles.nome}>{heroiEscolhido.data.results[0].name}</h1>
         <p className={styles.descricao}>
-          {heroiEscolhido.data.results[0].description.length > 0
+          {heroiEscolhido.data.results[0].description.length
             ? heroiEscolhido.data.results[0].description
             : 'This hero has no available description.'}
         </p>
       </section>
+      <div className={styles.footer}>
+        Data provided by Marvel. © 2021 MARVEL
+      </div>
     </div>
   );
 };
