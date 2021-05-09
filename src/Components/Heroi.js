@@ -19,6 +19,7 @@ const Heroi = () => {
     fetch(url)
       .then((response) => response.json())
       .then((json) => setHeroiEscolhido(json));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   if (heroiEscolhido === null) return null;
