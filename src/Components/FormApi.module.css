@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-* {
-  font-family: 'Roboto', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .form {
   display: flex;
@@ -10,9 +8,10 @@
 }
 
 .titulo {
+  font-family: 'Nunito', sans-serif;
   margin-top: 3rem;
   margin-bottom: 2rem;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   color: #ededed;
   text-shadow: #000 0px 0px 1px;
 }
@@ -23,6 +22,7 @@
   padding: 0.5rem;
   color: #ddd;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .divinput label {
@@ -84,6 +84,7 @@
   font-weight: bold;
   font-size: 1.25rem;
   margin-left: 2rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .heroicard:hover {
@@ -94,4 +95,6 @@
   max-height: 60vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.2em;
 }

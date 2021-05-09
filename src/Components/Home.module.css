@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
 body {
   margin: 0;
 }
@@ -35,4 +37,5 @@ body {
   left: 0;
   right: 0;
   color: #ccc;
+  font-family: 'Nunito', sans-serif;
 }
