@@ -3,10 +3,12 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import styles from './Heroi.module.css';
 import SearchIcon from '@material-ui/icons/Search';
+import Head from './Head';
 
 const Heroi = () => {
   const { id } = useParams();
   const [heroiEscolhido, setHeroiEscolhido] = React.useState(null);
+  const [error, setError] = React.useState(null);
 
   const md5 = require('md5');
   const timeStamp = new Date().getTime();
@@ -16,21 +18,27 @@ const Heroi = () => {
   const url = `https://gateway.marvel.com/v1/public/characters/${id}?ts=${timeStamp}&apikey=${apiPublicKey}&hash=${md5Var}`;
 
   React.useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => setHeroiEscolhido(json));
+    try {
+      fetch(url)
+        .then((response) => response.json())
+        .then((json) => setHeroiEscolhido(json));
+    } catch (erro) {
+      setError('Um erro ocorreu');
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   if (heroiEscolhido === null) return null;
   return (
     <div className={styles.geral}>
+      <Head title="Heróis Marvel | Herói" />
       <Link to="/" className={styles.btnhome}>
         <SearchIcon className={styles.lupa} />
         <span to="/" className={styles.btnlink}>
           Voltar à pesquisa
         </span>
       </Link>
+      {error && <div>{error}</div>}
       <section className={styles.heroisection}>
         <img
           className={styles.image}

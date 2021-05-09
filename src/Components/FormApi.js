@@ -6,6 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 const FormApi = () => {
   const [inputHeroi, setInputHeroi] = React.useState('');
   const [dadosHerois, setDadosHerois] = React.useState(null);
+  const [error, setError] = React.useState(null);
 
   const md5 = require('md5');
   const timeStamp = new Date().getTime();
@@ -17,10 +18,15 @@ const FormApi = () => {
   React.useEffect(() => {
     if (inputHeroi !== '') {
       function fetchApi() {
-        fetch(url)
-          .then((res) => res.json())
-          .then((json) => setDadosHerois(json));
+        try {
+          fetch(url)
+            .then((res) => res.json())
+            .then((json) => setDadosHerois(json));
+        } catch (erro) {
+          setError('Um erro ocorreu');
+        }
       }
+
       fetchApi();
     } else if (inputHeroi === '') setDadosHerois(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -47,6 +53,7 @@ const FormApi = () => {
           onChange={(e) => setInputHeroi(e.target.value)}
         />
       </div>
+      {error && <div>{error}</div>}
       <div className={styles.cardwrapper}>
         {dadosHerois &&
           dadosHerois.data &&
