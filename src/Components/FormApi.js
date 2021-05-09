@@ -49,7 +49,7 @@ const FormApi = () => {
           id="heroi"
           name="heroi"
           placeholder="Search for a superhero"
-          value={inputHeroi.replace(' ', '-')}
+          value={inputHeroi}
           onChange={(e) => setInputHeroi(e.target.value)}
         />
       </div>
