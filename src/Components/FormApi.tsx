@@ -2,22 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './FormApi.module.css';
 import SearchIcon from '@material-ui/icons/Search';
+import {RootObject} from './JsonTS'
 
-const FormApi = () => {
+const FormApi: React.FC = () => {
   const [inputHeroi, setInputHeroi] = React.useState('');
-  const [dadosHerois, setDadosHerois] = React.useState(null);
-  const [error, setError] = React.useState(null);
+  const [dadosHerois, setDadosHerois] = React.useState<RootObject | null>(null);
+  const [error, setError] = React.useState<string | null>(null);
+
 
   const md5 = require('md5');
-  const timeStamp = new Date().getTime();
-  const apiPrivKey = '815ff3955b1a4a4a2a2e3b537df4f2891a065a74';
-  const apiPublicKey = '9577a922c53e29cd435dc1a4c081020e';
-  const md5Var = md5(`${timeStamp}${apiPrivKey}${apiPublicKey}`);
-  const url = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${inputHeroi}&ts=${timeStamp}&apikey=${apiPublicKey}&hash=${md5Var}`;
+  const timeStamp: number = new Date().getTime();
+  const apiPrivKey: string = '815ff3955b1a4a4a2a2e3b537df4f2891a065a74';
+  const apiPublicKey: string = '9577a922c53e29cd435dc1a4c081020e';
+  const md5Var: string = md5(`${timeStamp}${apiPrivKey}${apiPublicKey}`);
+  const url: string = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${inputHeroi}&ts=${timeStamp}&apikey=${apiPublicKey}&hash=${md5Var}`;
 
   React.useEffect(() => {
     if (inputHeroi !== '') {
-      function fetchApi() {
+      const fetchApi = () => {
         try {
           fetch(url)
             .then((res) => res.json())
@@ -32,12 +34,12 @@ const FormApi = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputHeroi]);
 
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  // }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={(event) => event.preventDefault()} className={styles.form}>
       <h1 className={styles.titulo}>My Superhero</h1>
       <div className={styles.divinput}>
         <label htmlFor="heroi">
@@ -50,7 +52,7 @@ const FormApi = () => {
           name="heroi"
           placeholder="Search for a superhero"
           value={inputHeroi}
-          onChange={(e) => setInputHeroi(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputHeroi(e.target.value)}
         />
       </div>
       {error && <div>{error}</div>}
